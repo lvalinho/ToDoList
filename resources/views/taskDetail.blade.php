@@ -50,6 +50,7 @@
 		    </tr>
 		</tfoot>
 	</table>
+	<a href="/task">back</a>
 	@endforeach
 	@if (isset($valMsg) && $valMsg != '')
 		<div class="ui negative message">

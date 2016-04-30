@@ -44,10 +44,11 @@ class HomeController extends Controller
 
     public function taskDetail($task_id){
     	$task = $this->getTaskByID($task_id);
-        if ($task[0]->user_id == Auth::User()->id)
-    	   return view('taskDetail', ['username' => Auth::User()->name, 'tasks' => $task, 'errorMsg' => '']);
-        else 
-            return view('errors/notFound', ['username' => Auth::User()->name]);
+        if (count($task) == 1)
+            if ($task[0]->user_id == Auth::User()->id)
+    	       return view('taskDetail', ['username' => Auth::User()->name, 'tasks' => $task, 'errorMsg' => '']);
+         
+        return view('errors/notFound', ['username' => Auth::User()->name]);
     }
 
     public function taskValidation($task_id, Request $request){
