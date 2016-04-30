@@ -24,7 +24,7 @@
                   </div>
                 </div>
               @else
-              <a class="item" href="register">New User</a>
+              <a class="item" href="/auth/register">New User</a>
               @endif
             </div>
           </div>
