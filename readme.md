@@ -10,6 +10,7 @@ GRANT ALL PRIVILEGES ON todolist.* TO todolist@localhost;
 FLUSH PRIVILEGES;
 
 Create schema, 2 options:
+
 1) create schema through artisan (run on root project folder):
 	$php artisan migrate
 
